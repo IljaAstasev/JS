@@ -160,6 +160,6 @@ req.then((product)=>{
     console.log(data);
 }).catch(()=>{
     console.log('ERROR!')
-}.finally(()=>{
-    console.log("Все действия выполнены")
-}
+}).finally(()=>{
+    console.log("Все действия выполнены");
+});
