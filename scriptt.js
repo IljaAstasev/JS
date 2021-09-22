@@ -165,8 +165,28 @@ function getZero(num){
                 this.classes.forEach(className => element.classList.add(className));
             }
 
-            element.innerHTML = `
-            <img src=${this.src} alt=${this.alt}> 
-            <h3 class="menu__item-subtitle">
-            `
+           
+        
+
+        element. innerHTML = `
+            <img src=${this.src} alt=${this.alt}>
+            <h3 class="menu__item-subtitle">${this.title}</h3>
+            <div class="menu__item-descr”>${this.deser}</div>
+            <div class="menu_item-divider"></div>
+            <div class="menu_item-price">
+                <div class="menu__item-cost”>Цена:</div>
+                <div class="menu__item-total”><span>${this.price}</span> EUR/день</div>             
+        `;
+        this.parent.append(element);
         }
+    }
+
+    getResourse('http://localhost:3000/menu')
+        .then(data => {
+            data.forEach(({img, altimg, title, img,descr, price, ".menu .container").render();
+        }));
+        });
+
+        // forms
+
+        
